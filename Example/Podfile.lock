@@ -1,0 +1,31 @@
+PODS:
+  - CocoaAsyncSocket (7.6.4)
+  - IMSDK (0.1.0)
+  - Protobuf (3.11.4)
+  - ReactiveObjC (3.1.1)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket
+  - IMSDK (from `../`)
+  - Protobuf (= 3.11.4)
+  - ReactiveObjC
+
+SPEC REPOS:
+  trunk:
+    - CocoaAsyncSocket
+    - Protobuf
+    - ReactiveObjC
+
+EXTERNAL SOURCES:
+  IMSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
+  IMSDK: 0172ac425a68d78f421e141cf89f7d3f3926f65b
+  Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+
+PODFILE CHECKSUM: 925a19e3542d7bd487617b4f85a9cba09891a2fb
+
+COCOAPODS: 1.9.1
