@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D7E7A76F220080489159EB16BF313EE"
-               BuildableName = "IMSDK.framework"
+               BuildableName = "libIMSDK.a"
                BlueprintName = "IMSDK"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

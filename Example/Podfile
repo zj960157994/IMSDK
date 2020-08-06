@@ -1,4 +1,4 @@
-use_frameworks!
+#use_frameworks!
 
 platform :ios, '8.0'
 
@@ -6,9 +6,6 @@ platform :ios, '8.0'
 
 target 'IMSDK_Example' do
   pod 'IMSDK', :path => '../'
-  pod 'Protobuf', '3.11.4'
-  pod 'CocoaAsyncSocket'
-  pod 'ReactiveObjC'
 
 
   target 'IMSDK_Tests' do

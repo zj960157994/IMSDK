@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MKRProtocolbuffer.h"
-#import "MKRSocketRequest.h"
+#import "GCDAsyncSocket.h"
 
 @protocol MKRSocketDelegate <NSObject>
 
@@ -38,6 +37,6 @@ typedef void(^connect_Failure_Block)(NSError *error);
 //失败链接回调
 -(void)connectFailure:(connect_Failure_Block)connectBlock;
 //链接服务器
-- (BOOL)connecteServerWith:(NSString *)host  onPort:(uint16_t)port success:(connect_Success_Block)successBlock failed:(connect_Failure_Block)failedBlock;
+-(BOOL)connecteServerWith:(NSString *)host  onPort:(uint16_t)port success:(connect_Success_Block)successBlock failed:(connect_Failure_Block)failedBlock;
 
 @end

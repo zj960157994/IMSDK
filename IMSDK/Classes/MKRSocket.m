@@ -12,10 +12,6 @@
 #import "GPBProtocolBuffers.h"
 
 
-#import "MKRSocketRequest.h"
-#import "MKRProtocolbuffer.h"
-
-
 @interface MKRSocket()<GCDAsyncSocketDelegate>
 
 //全局Socket
@@ -61,7 +57,7 @@
     self.connectStatus = MKRSOCKETCONNECTING;
     if (!self.socket.isConnected) {
         NSError *err;
-        success = [self.socket connectToHost:host onPort:port withTimeout:SOCKETCONNECTTIMEOUT error:&err];
+        success = [self.socket connectToHost:host onPort:port withTimeout:5 error:&err];
         if (err != nil)
         {
             if (failedBlock) {
@@ -83,7 +79,7 @@
     if (_connectBlock) {
         _connectBlock();
     }
-    [_socket readDataWithTimeout:SOCKETREADTIMEOUT tag:1];
+    [_socket readDataWithTimeout:5 tag:1];
     NSLog(@"链接成功");
 }
 
@@ -95,22 +91,22 @@
     }
     [self disconnect];
     NSLog(@"链接断开:%@",[err localizedDescription]);
-    [[MKRUserVerify shareInstance] connectToVerify];
+    
 }
 
 //MARK: 发送成功
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag{
-    [_socket readDataWithTimeout:SOCKETREADTIMEOUT tag:tag];
+    [_socket readDataWithTimeout:5 tag:tag];
     NSLog(@"发送成功");
 }
 
 //MARK: 接收信息
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
-    [self.socket readDataWithTimeout:SOCKETREADTIMEOUT tag:tag];
+    [self.socket readDataWithTimeout:5 tag:tag];
     if (_delegate && [_delegate respondsToSelector:@selector(didReceiverData:)]) {
         [_delegate performSelector:@selector(didReceiverData:) withObject:data];
     }
-    [self.socket readDataWithTimeout:SOCKETREADTIMEOUT tag:tag];
+    [self.socket readDataWithTimeout:5 tag:tag];
     NSLog(@"接收数据成功");
 }
 

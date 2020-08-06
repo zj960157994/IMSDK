@@ -1,7 +1,7 @@
 {
   "name": "IMSDK",
   "version": "0.1.0",
-  "summary": "A short description of IMSDK.",
+  "summary": "雷神科技的IM通讯SDK",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/zj960157994/IMSDK",
   "license": {
@@ -18,5 +18,19 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "IMSDK/Classes/**/*"
+  "source_files": "IMSDK/Classes/**/*",
+  "dependencies": {
+    "Protobuf": [
+      "3.11.4"
+    ],
+    "CocoaAsyncSocket": [
+
+    ],
+    "ReactiveObjC": [
+
+    ],
+    "FMDB": [
+
+    ]
+  }
 }

@@ -1,18 +1,23 @@
 PODS:
   - CocoaAsyncSocket (7.6.4)
-  - IMSDK (0.1.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - IMSDK (0.1.0):
+    - CocoaAsyncSocket
+    - FMDB
+    - Protobuf (= 3.11.4)
+    - ReactiveObjC
   - Protobuf (3.11.4)
   - ReactiveObjC (3.1.1)
 
 DEPENDENCIES:
-  - CocoaAsyncSocket
   - IMSDK (from `../`)
-  - Protobuf (= 3.11.4)
-  - ReactiveObjC
 
 SPEC REPOS:
   trunk:
     - CocoaAsyncSocket
+    - FMDB
     - Protobuf
     - ReactiveObjC
 
@@ -22,10 +27,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
-  IMSDK: 0172ac425a68d78f421e141cf89f7d3f3926f65b
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IMSDK: 92cee4433b53e7417b642b84ccaebaceb157dab5
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
 
-PODFILE CHECKSUM: 925a19e3542d7bd487617b4f85a9cba09891a2fb
+PODFILE CHECKSUM: 02ed53490dca06239b61088f6cdc6510e1739d23
 
 COCOAPODS: 1.9.1
